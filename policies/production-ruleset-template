@@ -1,0 +1,30 @@
+{
+  "name": "main-branch-protection-policy",
+  "target": "branch",
+  "source_type": "Repository",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/heads/main"],
+      "exclude": []
+    }
+  },
+  "rules": [
+    { "type": "deletion_restriction" },
+    { "type": "pull_request", "parameters": { "required_approving_review_count": 1, "require_code_owner_review": true } }
+  ],
+  "bypass_actors_blueprint_documentation": [
+    {
+      "actor_id": 4321,
+      "actor_type": "Team",
+      "bypass_mode": "pull_request_only",
+      "note": "Maps to @your-org/devops-infra for automated hotfixes"
+    },
+    {
+      "actor_id": 9876,
+      "actor_type": "Integration",
+      "bypass_mode": "always",
+      "note": "Allows authorized Release Automation GitHub Apps to tag production deployments"
+    }
+  ]
+}
