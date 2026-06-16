@@ -11,4 +11,4 @@
 /.github/workflows/ @leswlk
 
 # Protect infrastructure-as-code deployment templates
-/aws/ @leswlk[cite: 2, 3]
+/aws/ @leswlk

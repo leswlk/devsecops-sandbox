@@ -1,0 +1,16 @@
+# ==========================================
+# LAYER 1 & 2: GLOBAL POLICY ARCHITECTURE
+# ==========================================
+# Root-level configurations for open-source vulnerability containment
+
+# ==========================================
+# LAYER 3: TARGET DECLARATION (TABLE ARRAYS)
+# ==========================================
+[[IgnoredVulns]] # Defines the first unique vulnerability exclusion path
+
+# ==========================================
+# LAYER 4: GRANULAR CONSTRAINTS & ARGUMENTS
+# ==========================================
+id = "GO-2022-0968"
+ignoreUntil = 2026-12-31
+reason = "The underlying vulnerable SSH engine code path is neither compiled nor exposed within our active production containers."
