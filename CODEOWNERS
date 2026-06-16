@@ -1,0 +1,14 @@
+# ==========================================
+# LAYER 1 & 2: GLOBAL FALLBACK
+# ==========================================
+# Default fallback owner for everything in the repo
+* @leswlk
+
+# ==========================================
+# LAYER 3 & 4: GRANULAR SECURITY CONSTRAINTS
+# ==========================================
+# Prevent unauthorized tampering of CI/CD pipeline definitions
+/.github/workflows/ @leswlk
+
+# Protect infrastructure-as-code deployment templates
+/aws/ @leswlk[cite: 2, 3]
